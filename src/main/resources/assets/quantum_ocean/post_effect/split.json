@@ -1,0 +1,29 @@
+{
+  "targets": {
+    "temp": {}
+  },
+  "passes": [
+    {
+      "program": "quantum_ocean:post/split",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "minecraft:main",
+          "bilinear": true
+        }
+      ],
+      "output": "temp"
+    },
+    {
+      "program": "minecraft:post/blit",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "temp",
+          "bilinear": true
+        }
+      ],
+      "output": "minecraft:main"
+    }
+  ]
+}

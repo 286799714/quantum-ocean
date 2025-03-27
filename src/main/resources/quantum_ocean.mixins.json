@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.maydaymemory.qo.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "quantum_ocean.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "PostChainMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

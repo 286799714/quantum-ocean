@@ -1,0 +1,35 @@
+{
+  "targets": {
+    "temp": {}
+  },
+  "passes": [
+    {
+      "program": "quantum_ocean:post/scanner",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "minecraft:main",
+          "bilinear": true
+        },
+        {
+          "sampler_name": "Depth",
+          "target": "minecraft:main",
+          "use_depth_buffer": true,
+          "bilinear": true
+        }
+      ],
+      "output": "temp"
+    },
+    {
+      "program": "minecraft:post/blit",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "temp",
+          "bilinear": true
+        }
+      ],
+      "output": "minecraft:main"
+    }
+  ]
+}
